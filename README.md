@@ -37,9 +37,9 @@ Il faut deux informations :
 Quand l'état est égal à `true`.
 
 ### 3.Comment une tache est supprimée ?
-Si l'état est égal à `true`, supprimer l'objet de la base de données
-- [ ]Connaître la propriété `_id` de l'objet
-- [ ]Créer une route API pour supprimer l'objet de la BDD
+Chaque tâches présentent un bouton qui, au clic, permet de supprimer l'objet.
+- [ ] Je dois connaître la propriété `_id` de l'objet
+- [ ]Créer une route `api` pour supprimer l'objet
 
 ### 4.Comment les tâches sont filtrées ?
 Je dois sélectionner tous les objets et n'afficher que ceux dont la propriété `state` est égale à `true` ( ou à `false`)
