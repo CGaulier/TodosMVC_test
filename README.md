@@ -12,7 +12,7 @@ Définition des actions de l'utilisateur :
 - [ ] En tant qu'utlisateur je peux ajouter les tâches à réaliser
 - [ ] En tant qu'utlisateur je peux supprimer toutes les tâches réalisées
 
-##Mise en place du projet
+## Mise en place du projet
 Etapes à suivre pour préparer le projet TodosMVC_test
 - [ ] Initier un server Node.js
 - [ ] Configurer la BDD MongoDB
