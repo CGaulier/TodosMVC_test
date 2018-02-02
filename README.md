@@ -29,9 +29,18 @@ Le but est de définir les models de données à utiliser pour l'application
 
 ### 1.Combien d'informations faut-il enregistrer pour une tâche ?
 Il faut deux informations :
-- ID
-- Etat
-- Contenu
+- ID : string
+- Etat : boolean
+- Contenu : string
 
 ### 2.Comment une tâche est validée ?
-Quand l'état est égal à `true` ou `1`
+Quand l'état est égal à `true`.
+
+### 3.Comment une tache est supprimée ?
+Si l'état est égal à `true`, supprimer l'objet de la base de données
+- [ ]Connaître la propriété `_id` de l'objet
+- [ ]Créer une route API pour supprimer l'objet de la BDD
+
+### 4.Comment les tâches sont filtrées ?
+Je dois sélectionner tous les objets et n'afficher que ceux dont la propriété `state` est égale à `true` ( ou à `false`)
+- [ ] Créer une route  `api` pour sélectionner les tâches.
