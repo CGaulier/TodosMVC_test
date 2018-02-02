@@ -1,7 +1,7 @@
 # TodosMVC_test
 Projet de cours basé sur le site TODOMVC.com
 
-<br>
+<br/>
 
 ## User stories
 Définition des actions de l'utilisateur :
