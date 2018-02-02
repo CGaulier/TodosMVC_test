@@ -1,32 +1,39 @@
 /*
 Importer les dépendances
 */
-const express = require('express');
-const path = require('path');
-const ejs = require('ejs');
+    // Composants
+    const express = require('express');
+    const path = require('path');
+    const ejs = require('ejs');
+
+    // Modules
+    const frontRoute = require('./routes/front');
+    const apiRoute = require('./routes/api');
+
 //
-
-
-const frontRoute = require('./routes/front');
 
 /*
 Initialiser le serveur
 */
-const app = express();
-const port = process.env.PORT || 3000;
+    // Configurer le serveur
+    const app = express();
+    const port = process.env.PORT || 3000;
+
+    // Configurer le dossier des vues client
+    app.set( 'views', __dirname + '/www' );
+    app.use( express.static(path.join(__dirname, 'www')) );
+
+    // Définir le moteur de rendu
+    //app.engine( 'html', ejs.renderFile );
+    app.set( 'view engine', 'ejs' );
+
+    // Configurer les routes
+    app.use('/', frontRoute);
+    app.use('/api', apiRoute);
 //
-
-     //configurer le dossier des vues clients
-     app.set('views',__dirname + '/www');
-     app.use( express.static(path.join(__dirname, 'www')) );
-
-     
-
-
-
 
 /*
 Lancer le serveur
 */
-app.listen( port, () => console.log(`Le serveur est lancé sur le port ${port}`) );
+    app.listen( port, () => console.log( `Le serveur est lancé sur le port ${port}`) )
 //
